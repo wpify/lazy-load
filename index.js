@@ -18,6 +18,4 @@ module.exports = (element, load) => {
   } else {
     load(element);
   }
-
-  document.addEventListener("DOMContentLoaded", run);
 };

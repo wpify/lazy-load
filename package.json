@@ -1,6 +1,6 @@
 {
   "name": "wpify-lazy-load",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Helper for lazy loading",
   "main": "index.js",
   "scripts": {
