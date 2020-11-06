@@ -1,4 +1,4 @@
-module.export = (element, load) => {
+module.exports = (element, load) => {
   if (!element || !load) {
     return;
   }
