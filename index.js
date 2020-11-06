@@ -12,14 +12,12 @@ module.exports = (element, load) => {
     });
   }
 
-  const run = () => {
-    if ("IntersectionObserver" in window) {
-      const observer = new IntersectionObserver(observerCallback);
-      observer.observe(element);
-    } else {
-      load(element);
-    }
-  };
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(observerCallback);
+    observer.observe(element);
+  } else {
+    load(element);
+  }
 
   document.addEventListener("DOMContentLoaded", run);
 };
