@@ -1,19 +1,33 @@
 {
   "name": "wpify-lazy-load",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Helper for lazy loading",
-  "main": "index.js",
+  "main": "dist/main.js",
   "scripts": {
+    "prepare": "npm run build",
+    "build": "webpack-cli --entry=./src/index.js --mode=production",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/wpify/lazy-load.git"
   },
+  "browserslist": [
+    "defaults",
+    "cover 97%",
+    "IE 11"
+  ],
   "author": "Daniel Mejta <daniel@mejta.net>",
   "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/wpify/lazy-load/issues"
   },
-  "homepage": "https://github.com/wpify/lazy-load#readme"
+  "homepage": "https://github.com/wpify/lazy-load#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^5.19.0",
+    "webpack-cli": "^4.4.0"
+  }
 }
